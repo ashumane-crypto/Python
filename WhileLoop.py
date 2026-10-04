@@ -1,18 +1,18 @@
 #while= condition(When we don't know the fix iteration)
 
-#Ascending order
+# 1)Ascending order
 i=1
 while(i<=10):
     print(i)
     i=i+1
 
-#Descending order
+# 2)Descending order
 i=10
 while(i>=1):
     print(i)
     i=i-1
 
-#Reverse a number
+# 3)Reverse a number
 num=int(input("Enter a number "))
 rev=0
 while(num>0):
@@ -22,7 +22,7 @@ while(num>0):
 print("Reverse number is:",rev)
     
 
-# Palindrome Number
+# 4)Palindrome Number
 num=int(input("Enter a Number "))
 temp=num
 rev=0
@@ -37,7 +37,7 @@ else:
     print("Given Number is not Palindrome")
 
 
-#Amstrong Number
+# 5)Amstrong Number
 num=int(input("Enter a Number "))
 sum=0
 temp=num
@@ -51,7 +51,7 @@ if(temp==sum):
 else:
     print("Given Number is not Amstrong")
 
-#Addition of digits
+# 6)Addition of digits
 num=int(input("Enter a Number "))
 sum=0
 while(num>0):
@@ -60,7 +60,7 @@ while(num>0):
     num=num//10
 print("Sum is:",sum)
 
-#Multiplication of digits
+# 7)Multiplication of digits
 num=int(input("Enter a Number "))
 mul=1
 while(num>0):

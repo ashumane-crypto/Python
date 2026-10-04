@@ -39,7 +39,7 @@ for i in range(1,num+1):
         sum=sum+i
 print("The sum of even number is:",sum)
 
-# 7)Odd number and their sum
+#7)Odd number and their sum
 num=int(input("Enter a number "))
 sum=0
 for i in range(1,num+1):
@@ -47,7 +47,7 @@ for i in range(1,num+1):
         sum=sum+i
 print("Sum of odd number is :",sum)
 
-# 8)Table for n particular number
+#8)Table for n particular number
 num=int(input("Enter a number "))
 for i in range(1,11):
     print(num,"*",i,"=",num*i)
