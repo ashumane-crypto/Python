@@ -79,6 +79,25 @@ print(fruits)
 newNum=num.copy() #3)Returns the shallow copy of the list
 print(newNum)
 
+#Sum of List
+list4=[1,2,3,4,5,6,7,8,8,4]
+sum=0
+for i in list4:
+    sum=sum+i
+print ("Sum of list element is:",sum)
+
+#List Function 
+print(len(list4))
+print(min(list4))
+print(max(list4))
+print(sorted(list4))
+
+
+
+
+
+
+
 
 
 
