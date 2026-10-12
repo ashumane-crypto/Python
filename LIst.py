@@ -55,7 +55,7 @@ fruits.insert(2,"Lemon") #3)Insert-to insert item at specific index(index,value)
 print(fruits)
 
 #Removing Element
-fruits .pop()  #1) Removes the lat element
+fruits .pop()  #1) Removes the last element
 print(fruits)
 
 fruits.remove(3) #2)give direct value to which you have to remove
