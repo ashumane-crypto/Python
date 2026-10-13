@@ -4,4 +4,4 @@ def fact(n):
         return 1
     else:
         return n*fact(n-1)
-print("Factorial of givin number is: ",fact(4))
+print("Factorial of given number is: ",fact(4))
