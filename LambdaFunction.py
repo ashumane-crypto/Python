@@ -35,7 +35,7 @@ print(vote(19))
 marks=lambda c:"Pass" if c>35 else "Fail"
 print("You are",marks(80),"in exam")
 
-#Map-It executes a function for each item in an iterable (list, tuple etc.) and returns a list of the results.
+#Map-It executes a function for each item in an iterable (list, tuple etc.)
 def sq(x):
     return x*x
 t=(9,2,3,4,5,6,7)
