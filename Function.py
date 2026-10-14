@@ -48,5 +48,10 @@ add(100,200)
 #     print("given number is not armstrong")
 # armstrong(num)
 
+#pass statement it used to future implementation of function
+def demo():
+    pass
+demo()
+
 
 

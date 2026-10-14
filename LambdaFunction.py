@@ -30,7 +30,17 @@ print("The given number is :",Even_Odd(4))
 vote=lambda b:"Eligible for vote" if b>=18 else "You are not eligible for vote"
 print(vote(19))
 
+
+# Marks 
 marks=lambda c:"Pass" if c>35 else "Fail"
 print("You are",marks(80),"in exam")
+
+#Map-It executes a function for each item in an iterable (list, tuple etc.) and returns a list of the results.
+def sq(x):
+    return x*x
+t=(9,2,3,4,5,6,7)
+ut=(map(sq,t))
+print(list(ut))
+
 
 
