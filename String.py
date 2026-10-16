@@ -95,6 +95,24 @@ string18=string17.count("are",3,41)
 print(string18)
 
 
+#More string functions
+string19=string17.endswith("ty")
+print(string19)
+
+string20=string17.startswith("")
+print(string20)
+
+string22="123num"
+string23=string22.isalnum()  #letter+digit then return true
+print(string23)
+
+string24=string22.isdigit() #only digit then return true
+print(string24)
+
+string25=string22.isalpha()  #only alphabets then return true
+print(string25)
+
+
 
 s="Programming"
 count=0
