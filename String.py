@@ -94,12 +94,33 @@ string17="This are my favourite fruits and they are tasty"
 string18=string17.count("are",3,41)
 print(string18)
 
+
+
 s="Programming"
 count=0
 for ch in s:
     if ch=="a" or ch=="e" or ch=="i" or ch=="o" or ch=="u":
         count=count+1
 print("Count of vowels is:-",count)
+
+
+#Find seprate Letter,number and symbol from mixed string
+mixed_string="User_12345!"
+letter=""
+number=""
+symbol=""
+for char in mixed_string:
+    if char.isalpha():
+        letter=letter+char
+    elif char.isdigit():
+        number=number+char
+    else:
+        symbol=symbol+char
+print(f"Letters:{letter}")
+print(f"Number:{number}")
+print(f"Symbol:{symbol}")
+
+
 
 
 
