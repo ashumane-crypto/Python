@@ -121,6 +121,31 @@ for ch in s:
         count=count+1
 print("Count of vowels is:-",count)
 
+#Count number of a
+s1="Programming Language"
+count=0
+for i in s1:
+    if i=="a":
+        count=count+1
+print("count of a",count)
+
+#count space
+s2="Python is Programming Language"
+count1=0
+for lang in s2:
+    if lang==" ":
+        count1=count1+1
+print("count of white space",count1)
+
+s="Programming"
+for ch in s:
+    if ch=="a" or ch=="e" or ch=="i" or ch=="o" or ch=="u":
+        print("vowels is:-",ch)
+
+
+
+
+
 
 #Find seprate Letter,number and symbol from mixed string
 mixed_string="User_12345!"
@@ -137,6 +162,14 @@ for char in mixed_string:
 print(f"Letters:{letter}")
 print(f"Number:{number}")
 print(f"Symbol:{symbol}")
+
+
+
+
+
+
+
+
 
 
 
