@@ -53,6 +53,39 @@ for i in range(1,11):
     print(num,"*",i,"=",num*i)
 
 
+# 9) Build a Number Pyramid
+rows = 5
+
+# Outer loop controls rows
+for i in range(1, rows + 1):
+    # Inner loop controls columns in each row
+    for j in range(1, i + 1):
+        print(j, end=" ")
+    print()  # Moves to the next line after finishing a row
+
+# Output:
+# 1 
+# 1 2 
+# 1 2 3 
+# 1 2 3 4 
+# 1 2 3 4 5
+
+
+# 10)FizzBuzz Challenge
+# Loop from 1 to 15
+for i in range(1, 16):
+    # Check both first! If a number is divisible by 15, it's divisible by 3 and 5.
+    if i % 3 == 0 and i % 5 == 0:
+        print("FizzBuzz")
+    elif i % 3 == 0:
+        print("Fizz")
+    elif i % 5 == 0:
+        print("Buzz")
+    else:
+        print(i)
+
+
+
 
 
 
