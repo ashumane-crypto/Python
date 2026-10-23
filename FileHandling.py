@@ -45,10 +45,25 @@
 
 # f.close()
 
-file=open("demo1.txt",'r')
-print(file.read())
-file.close()
+# file=open("demo1.txt",'r')
+# print(file.read())
+# file.close()
 
+
+#To delete the file we have to import os module first then we can remove the file.
+# import os
+# os.remove("demo1.txt")
+
+# import os
+# if os.path.exists("demo1.txt"):
+#     os.remove("demo1.txt")
+# else:
+#     print("File does not exist")
+
+#if we use with then we dont need to close() the file it automatically detects
+with open("demo.txt",'r') as f:
+    data=f.read()
+    print(data)
 
 
 
