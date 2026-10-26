@@ -50,8 +50,34 @@ add(100,200)
 
 #pass statement it used to future implementation of function
 def demo():
-    pass
+    pass #strore place for future code
 demo()
 
+#Types of  argument function in python
+#1) Default Argument
+def avg(a=5,b=7):
+    print("Average is",(a+b)/2)
+avg()  #it gives a by default argument from the given parameter
+
+#2) Required argument
+def name(fname,lname="Mane"):
+    print("My name is :",fname,lname)
+name("Ashwini")  #if we did not pass the parametr value then we have to pass the argument in function calling
+
+#3) Keyword Argument
+def name(fname,mname,lname):
+    print("My name is ",fname,mname,lname)
+name(mname="Dhanaji",fname="Ashwini",lname="Mane") #Withoout maintaining order we can call the keyword and value and pass the argument
+
+#4)Variable length function:
+    #A)Arbitary function  #Passes many values in argument by tuple
+def avg(*average):
+    sum=0
+    for i in average:
+        sum=sum+i
+    print("Average of given nmber is:",sum/len(average))
+avg(2,3,4,5,7)
+
+    
 
 
