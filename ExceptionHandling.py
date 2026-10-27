@@ -61,13 +61,28 @@
 #     print("code runss")
 
 #by importing os module's os._exit(0) we cannot executes a finally block
-import os
-try:
-    print("we are in try block")
-    os._exit(0)      #immediately terminates the process.0 indicates successful termination.
-except:
-    print("We are in except block")
-finally:
-    print("we are in finally block")
+# import os
+# try:
+#     print("we are in try block")
+#     os._exit(0)      #immediately terminates the process.0 indicates successful termination.
+# except:
+#     print("We are in except block")
+# finally:
+#     print("we are in finally block")
+
+class ToYoungException:
+    def __init__(self,arg):
+        self.msg=arg
+class ToOldException:
+    def __init__(self,arg):
+        self.msg=arg
+age=int(input("Enter your age:"))
+if age>60:
+    raise ToOldException("You crossed your age limit")
+elif age<18:
+    raise ToYoungException("Wait some times,your age not fit in this")
+
+
+        
 
 
