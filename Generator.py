@@ -49,3 +49,43 @@ print("Third call:", next(counter))
 print("\nLooping through a new generator instance:")
 for number in count_up_to(5):
     print(number)
+
+
+
+#  Advanced Production Pattern: Generator Pipelines (Data Engineering)
+def raw_data_source():
+    """Simulates a stream of raw user registrations from a database."""
+    users = [
+        {"name": "rahul", "age": 24, "role": "developer"},
+        {"name": "sneha", "age": 17, "role": "intern"},  # Underage
+        {"name": "amit", "age": 29, "role": "manager"},
+        {"name": "priya", "age": 31, "role": "lead"}
+    ]
+    for user in users:
+        yield user
+
+def adult_filter(data_stream):
+    """Pipeline Stage 1: Filters out users under 18 years old."""
+    for user in data_stream:
+        if user["age"] >= 18:
+            yield user
+
+def capitalize_names(data_stream):
+    """Pipeline Stage 2: Formats user names for database storage."""
+    for user in data_stream:
+        user["name"] = user["name"].capitalize()
+        yield user
+
+# --- Executing the Pipeline ---
+# 1. Instantiate the source
+raw_stream = raw_data_source()
+
+# 2. Pipe source into the filter
+filtered_stream = adult_filter(raw_stream)
+
+# 3. Pipe filtered data into the formatter
+processed_stream = capitalize_names(filtered_stream)
+
+print("Processed and Filtered Pipeline Output:")
+for clean_user in processed_stream:
+    print(clean_user)
