@@ -83,6 +83,32 @@ elif age<18:
     raise ToYoungException("Wait some times,your age not fit in this")
 
 
+
+# The finally Block vs return Statements (The Classic Trick Question)
+
+# What the interviewer is testing: A classic trap question. If a try or except block encounters a return statement, does the code inside the finally block still execute?
+# The Answer: Yes. The finally block is guaranteed to execute before the function actually transmits its return value back to the caller.
+
+def interview_trick_function():
+    """Demonstrates the execution priority of the finally block."""
+    try:
+        print("\n1. Inside the try block.")
+        return "Returned from TRY"  # The function prepares to exit here...
+    
+    except Exception:
+        return "Returned from EXCEPT"
+        
+    finally:
+        # ...but Python pauses the exit to execute this block first!
+        print("2. [GUARANTEED] Finally block executing right now.")
+        # CRITICAL WARNING: If you return a value from inside finally, 
+        # it will overwrite the previous return value!
+        # return "Returned from FINALLY" 
+
+# Executing the function
+returned_value = interview_trick_function()
+print(f"3. Final Caller Received: {returned_value}")
+
         
 
 
