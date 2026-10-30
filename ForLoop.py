@@ -86,6 +86,45 @@ for i in range(1, 16):
 
 
 
+# The Modifying-While-Iterating Trap
+
+my_list = [10, 20, 30, 40]
+for num in my_list:
+    if num == 20:
+        my_list.remove(num)
+print(my_list)
+
+
+#Leaking Loop Variables (Scope Leakage)
+for x in range(5):
+    pass
+
+print("Value of x outside loop:", x)
+
+
+#The for...else Misconception
+def check_numbers(nums):
+    for n in nums:
+        if n % 2 == 0:
+            print("Found an even number:", n)
+            break
+    else:
+        print("No even numbers found.")
+
+print("Test 1:")
+check_numbers([1, 3, 5])
+
+print("\nTest 2:")
+check_numbers([1, 2, 5])
+
+
+#Modifying the Iterator Variable Inside the Loop
+for i in range(5):
+    print(i, end=" ")
+    if i == 2:
+        i = 4  # Attempting to force the loop to skip to the end
+
+
 
 
 
